@@ -22,9 +22,7 @@
         fetch(`https://data-pusatprestasinasional.kemdikbud.go.id/api/jenjang`),
         fetch(`https://data-pusatprestasinasional.kemdikbud.go.id/api/service`),
         fetch(`https://data-pusatprestasinasional.kemdikbud.go.id/api/journey`),
-        fetch(`https://data-pusatprestasinasional.kemdikbud.go.id/api/event-kategori`),
-        fetch(`https://data-pusatprestasinasional.kemdikbud.go.id/api/landing-news`),
-        fetch(`https://data-pusatprestasinasional.kemdikbud.go.id/api/top-news`),
+
         fetch(`https://data-pusatprestasinasional.kemdikbud.go.id/api/kabar-prestasi`),
         fetch(`https://data-pusatprestasinasional.kemdikbud.go.id/api/quote-of-the-day`),
         fetch(`https://data-pusatprestasinasional.kemdikbud.go.id/api/poster`),
@@ -38,9 +36,7 @@
             jenjang: await jenjang.json(),
             service: await service.json(),
             journey: await journey.json(),
-            category: await category.json(),
-            news: await news.json(),
-            topNews: await topNews.json(),
+
             kabar: await kabar.json(),
             quotes: await quotes.json(),
             poster: await poster.json(),
@@ -51,7 +47,7 @@
     }
 </script>
 <script>
-    export let slider, latestVideo, jenjang, service, journey, category, news, topNews, kabar, quotes, poster, video, visitor
+    export let slider, latestVideo, jenjang, service, journey, kabar, quotes, poster, video, visitor
 </script>
 <svelte:head>
 	<title>Beranda | Pusat Prestasi Nasional</title>
@@ -61,7 +57,6 @@
 <LatestVideo {latestVideo} />
 <Level {jenjang}/>
 <Service {service}/>
-<Event {journey}{category}{news}{topNews}/>
 <Announcement {kabar}/>
 <Voting/>
 <Quotes {quotes}/>
