@@ -16,7 +16,7 @@
     import Footer from '$lib/Footer.svelte';
 
     export async function load({ fetch }) {
-      const [slider, latestVideo, jenjang, service, journey, category, news, topNews, kabar, quotes, poster, video, visitor] = await Promise.all([
+      const [slider, latestVideo, jenjang, service, journey, kabar, quotes, poster, video, visitor] = await Promise.all([
         fetch(`https://data-pusatprestasinasional.kemdikbud.go.id/api/slider`),
         fetch(`https://data-pusatprestasinasional.kemdikbud.go.id/api/latest-video`),
         fetch(`https://data-pusatprestasinasional.kemdikbud.go.id/api/jenjang`),
